@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var pool = new pool(config);
-app.get('/corct.php', function (req, res) {
+app.get('/corct1.php', function (req, res) {
   res.sendFile(path.join(__dirname, 'corct1.php'));
 });
 
