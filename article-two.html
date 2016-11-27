@@ -38,12 +38,13 @@ sunSize=sunSize+1;
 ae= sunSize*2;
 be= sunSize*3;
 y=y-1;
+
+request=requestAnimationFrame(draw);
 if(be >300){
   be = 30;
   ae = 30;
   cancelAnimationFrame(request);
 }
-request=requestAnimationFrame(draw);
 }
 draw();
 
