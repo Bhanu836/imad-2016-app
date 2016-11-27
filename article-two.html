@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html><head>
-        
+         <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body onload ="helloanim();" >
         
@@ -8,30 +8,39 @@
     function helloanim(){
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    
+    ct
 // the beautiful blue sky
 
 var y=45;
+
 // the starting size for the sun
 var sunSize = 30; 
+var aellipse,bellipse;
+
 function draw(){
     
 
  // The sun, a little circle on the horizon
  ctx.beginPath();
- ctx.ellipse(400,289-y, sunSize*2, sunSize*4, 45 * Math.PI/180 , 0, 2 * Math.PI);
+ ctx.ellipse(400,289-y, aellipse, bellipse, 45 * Math.PI/180 , 0, 2 * Math.PI);
  ctx.stroke();
  ctx.fillStyle="yellow";
  ctx.fill();
 
 // The land, blocking half of the sun
 ctx.beginPath();
-ctx.rect(0, 80, 100, 100);
+ctx.rect(0, 600, 400, 100);
 ctx.stroke();
 ctx.fillStyle="green";
 ctx.fill();
 sunSize=sunSize+1;
+aellipse= sunsize*1.5;
+bellipse= sunsize*3;
 y=y-1;
+if(bellipse >400){
+  bellipse=30;
+  aellipse=30;
+}
 requestAnimationFrame(draw);
 }
 draw();
