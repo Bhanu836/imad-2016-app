@@ -18,19 +18,16 @@ function draw(){
     
 
  // The sun, a little circle on the horizon
- ctx.fillStyle = "yellow";
+ ctx.ellipse(400,289-y, sunSize*2, sunSize*4, 45 * Math.PI/180 , 0, 2 * Math.PI);
+ctx.fillStyle = "yellow";
 ctx.fill();
-
-
-ctx.ellipse(400,289-y, sunSize*2, sunSize*4, 45 * Math.PI/180 , 0, 2 * Math.PI);
-
 // The land, blocking half of the sun
+ctx.rect(0, 80, 100, 100);
 ctx.fillStyle="green"
 ctx.fill();
-ctx.rect(0, 80, 100, 100);
 sunSize=sunSize+1;
 y=y-1;
-
+requestAnimationFrame(draw);
 }
 draw();
 
