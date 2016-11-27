@@ -13,7 +13,7 @@ function moveleft(){
 imgo.addEventListener("click", moveleft);
 function stop(){
     window.clearInterval(interval);
-    but.value="start";
+    but.innerHTML="start";
 }
 
 but1.addEventListener("click" ,stop);
