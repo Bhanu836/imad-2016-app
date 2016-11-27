@@ -7,7 +7,7 @@
         
     <script>
     var canvas= document.getElementById("myCanvas");
-    var ctx=canvas.getContext("3d");
+    var ctx=canvas.getContext("2d");
     
 // the beautiful blue sky
 
@@ -18,11 +18,11 @@ window.onload= function() {
     
 
  // The sun, a little circle on the horizon
-ctx.fill(255, 204, 0);
+ctx.fill(255, 204);
 ctx.ellipse(200,80-y, sunSize*2, sunSize*4);
 
 // The land, blocking half of the sun
-ctx.fill(76, 168, 67);
+ctx.fill(76, 168,);
 ctx.rect(0, 300, 400, 100);
 sunSize=sunSize+1;
 y=y-1;
