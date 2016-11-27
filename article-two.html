@@ -9,26 +9,14 @@
     function helloanim(){
     var canvas= document.getElementById("myCanvas");
     var ctx=canvas.getContext("2d");
-    
+    function drawcircle(){
+    ctx.rect(0, 300, 400, 100);
+    }
 // the beautiful blue sky
 
-var y=45;
-// the starting size for the sun
-var sunSize = 30; 
-draw= function() {
-    
 
- // The sun, a little circle on the horizon
-ctx.fill(255, 204, 0);
-ctx.ellipse(200,80-y, sunSize*2, sunSize*4);
 
-// The land, blocking half of the sun
-ctx.fill(76, 168, 67);
-ctx.rect(0, 300, 400, 100);
-sunSize=sunSize+1;
-y=y-1;
-
-};}</script>
+}</script>
             
         
         
