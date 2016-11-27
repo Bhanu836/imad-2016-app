@@ -2,16 +2,18 @@
 <html><head>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
-    <body><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+    <body><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;"></canvas>
 
         <script>
-    background(82, 222,240);
+        var cnvs =getElementById("myCanvas");
+        var ctx = cnvs.getContext("2d");
+    ctx.background(82, 222,240);
 // the beautiful blue sky
 
 var y=45;
 // the starting size for the sun
 var sunSize = 30; 
-draw= function() {
+ctx.draw= function() {
     
 
  // The sun, a little circle on the horizon
@@ -26,7 +28,7 @@ y=y-1;
 
 };
             
-        </script></canvas>
+        </script>
         
         
     </body>
