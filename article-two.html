@@ -29,7 +29,7 @@ function draw(){
 
 // The land, blocking half of the sun
 ctx.beginPath();
-ctx.rect(0, 600, 400, 100);
+ctx.rect(0, 798, 400, 100);
 ctx.stroke();
 ctx.fillStyle="green";
 ctx.fill();
@@ -37,7 +37,7 @@ sunSize=sunSize+1;
 ae= sunSize*2;
 be= sunSize*3;
 y=y-1;
-if(bellipse >400){
+if(be >400){
   be = 30;
   ae = 30;
 }
