@@ -18,11 +18,15 @@ function draw(){
     
 
  // The sun, a little circle on the horizon
+ ctx.fillStyle = "yellow";
+ctx.fill();
+
 ctx.fill(255, 204, 0);
 ctx.ellipse(200,89-y, sunSize*2, sunSize*4);
 
 // The land, blocking half of the sun
-ctx.fill(76, 168, 67);
+ctx.fillStyle="green"
+ctx.fill();
 ctx.rect(0, 300, 400, 100);
 sunSize=sunSize+1;
 y=y-1;
