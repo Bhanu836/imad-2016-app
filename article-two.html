@@ -2,10 +2,11 @@
 <html><head>
         
     </head>
-    <body onload ="draw()" ><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+    <body onload ="helloanim()" ><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
 </canvas>
         
     <script>
+    function helloanim(){
     var canvas= document.getElementById("myCanvas");
     var ctx=canvas.getContext("2d");
     
@@ -27,7 +28,7 @@ ctx.rect(0, 300, 400, 100);
 sunSize=sunSize+1;
 y=y-1;
 
-};</script>
+};}</script>
             
         
         
