@@ -22,14 +22,14 @@ function draw(){
 
  // The sun, a little circle on the horizon
  ctx.beginPath();
- ctx.ellipse(400,289-y, ae, be, 45 * Math.PI/180 , 0, 2 * Math.PI);
+ ctx.ellipse(500,289-y, ae, be, 10 * Math.PI/180 , 0, 2 * Math.PI);
  ctx.stroke();
  ctx.fillStyle="yellow";
  ctx.fill();
 
 // The land, blocking half of the sun
 ctx.beginPath();
-ctx.rect(0, 600, 798, 100);
+ctx.rect(0, 300, 998, 100);
 ctx.stroke();
 ctx.fillStyle="green";
 ctx.fill();
@@ -37,7 +37,7 @@ sunSize=sunSize+1;
 ae= sunSize*2;
 be= sunSize*3;
 y=y-1;
-if(be >400){
+if(be >300){
   be = 30;
   ae = 30;
 }
@@ -48,7 +48,7 @@ draw();
 }
 </script>
             
-  <canvas id="myCanvas" width="800" height="800" style="border:1px solid #000000;">
+  <canvas id="myCanvas" width="1000" height="400" style="border:1px solid #000000;">
 </canvas>      
         
         
