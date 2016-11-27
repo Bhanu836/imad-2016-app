@@ -2,10 +2,10 @@
 <html><head>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
-    <body><div id="jk">
+    <body><div id="jk"><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+
         <script>
-        var b = getElementById("jk");
-        b.style.background(82, 222,240);
+    background(82, 222,240);
 // the beautiful blue sky
 
 var y=45;
@@ -16,7 +16,7 @@ draw= function() {
 
  // The sun, a little circle on the horizon
 fill(255, 204, 0);
-ellipse(500,200-y, sunSize*2, sunSize*4);
+ellipse(200,80-y, sunSize*2, sunSize*4);
 
 // The land, blocking half of the sun
 fill(76, 168, 67);
@@ -26,7 +26,8 @@ y=y-1;
 
 };
             
-        </script></div>
+        </script></canvas>
+        </div>
         
     </body>
 </html>
