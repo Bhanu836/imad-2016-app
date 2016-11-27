@@ -13,16 +13,16 @@
 var y=45;
 // the starting size for the sun
 var sunSize = 30; 
-ctx.draw= function() {
+draw= function() {
     
 
  // The sun, a little circle on the horizon
-fill(255, 204, 0);
-ellipse(200,80-y, sunSize*2, sunSize*4);
+ctx.fill(255, 204, 0);
+ctx.ellipse(200,80-y, sunSize*2, sunSize*4);
 
 // The land, blocking half of the sun
-fill(76, 168, 67);
-rect(0, 300, 400, 100);
+ctx.fill(76, 168, 67);
+ctx.rect(0, 300, 400, 100);
 sunSize=sunSize+1;
 y=y-1;
 
