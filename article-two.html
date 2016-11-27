@@ -15,14 +15,14 @@ var y=45;
 
 // the starting size for the sun
 var sunSize = 30; 
-var aellips=30;
-var bellipse=30;
+var ae = 30;
+var be = 30;
 function draw(){
     
 
  // The sun, a little circle on the horizon
  ctx.beginPath();
- ctx.ellipse(400,289-y, aellipse, bellipse, 45 * Math.PI/180 , 0, 2 * Math.PI);
+ ctx.ellipse(400,289-y, ae, be, 45 * Math.PI/180 , 0, 2 * Math.PI);
  ctx.stroke();
  ctx.fillStyle="yellow";
  ctx.fill();
@@ -34,12 +34,12 @@ ctx.stroke();
 ctx.fillStyle="green";
 ctx.fill();
 sunSize=sunSize+1;
-aellipse= sunsize*1.5;
-bellipse= sunsize*3;
+ae= sunsize*1.5;
+be= sunsize*3;
 y=y-1;
 if(bellipse >400){
-  bellipse=30;
-  aellipse=30;
+  be = 30;
+  ae = 30;
 }
 requestAnimationFrame(draw);
 }
