@@ -2,7 +2,7 @@
 <html><head>
         
     </head>
-    <body ><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
+    <body onload="function()" ><canvas id="myCanvas" width="400" height="400" style="border:1px solid #000000;">
 </canvas>
         
     <script>
@@ -14,15 +14,15 @@
 var y=45;
 // the starting size for the sun
 var sunSize = 30; 
-window.onload= function() {
+draw= function() {
     
 
  // The sun, a little circle on the horizon
-ctx.fill(255, 204);
+ctx.fill(255, 204,0);
 ctx.ellipse(200,80-y, sunSize*2, sunSize*4);
 
 // The land, blocking half of the sun
-ctx.fill(76, 168);
+ctx.fill(76, 168,67);
 ctx.rect(0, 300, 400, 100);
 sunSize=sunSize+1;
 y=y-1;
