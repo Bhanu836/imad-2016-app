@@ -13,10 +13,11 @@ function moveleft(){
 imgo.addEventListener("click", moveleft);
 function stop(){
     window.clearInterval(interval);
-    but.innerHTML="start";
+    var btn = document.createElement("BUTTON");
+    btn.innerHTML="start";
     but.style.fontSize ="large";
      but.style.zIndex= 1000;
-     but1.addEventListener("click" ,moveleft);
+     btn.addEventListener("click" ,moveleft);
 }
 
 but.addEventListener("click" ,stop);
