@@ -5,7 +5,7 @@ var but =document.getElementById("hbutton");
 var but2 =document.getElementById("but1");
 var marginleft=0;
 var h=0;
-
+var interval = setInterval(moveleft,10);
 function moveleft(){
     marginleft= marginleft + 2 ;
    
@@ -34,4 +34,4 @@ function stop(){
 
 but.addEventListener("click" ,stop);
 
- var interval = setInterval(moveleft,10);
+ 
