@@ -14,8 +14,8 @@ imgo.addEventListener("click", moveleft);
 function stop(){
     window.clearInterval(interval);
     but.innerHTML="start";
-    but1.style.fontSize= "16px";
-    
+    but1.style.fontSize= 16;
+     but1.style.zIndex= 1000;
 }
 
 but1.addEventListener("click" ,stop);
