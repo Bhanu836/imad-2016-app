@@ -19,5 +19,5 @@ function stop(){
      but1.addEventListener("click" ,moveleft);
 }
 
-but1.addEventListener("click" ,stop);
+but.addEventListener("click" ,stop);
 
