@@ -44,4 +44,5 @@ butstop.addEventListener("click" ,stop);
 
 function  start(){
          setInterval(moveleft,10);
+        btn.removeEventListener("click" ,start );  
      }
