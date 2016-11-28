@@ -6,6 +6,7 @@ var but2 =document.getElementById("but1");
 var marginleft=0;
 var h=0;
 var i= 0;
+L:
 var interval = setInterval(moveleft,10);
 function moveleft(){
     marginleft= marginleft + 2 ;
@@ -46,6 +47,9 @@ function stop(){
 butstop.addEventListener("click" ,stop);
 
 function  start(){
-     var interval2  = setInterval(moveleft,100);
-         
+     
+         var interval2 = setInterval(moveleft,90);
+         if (i %2 !== 0){
+          window.clearInterval(interval2);
+         }
      }
