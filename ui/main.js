@@ -6,7 +6,7 @@ var but2 =document.getElementById("but1");
 var marginleft=0;
 var h=0;
 var i= 0;
-L:
+
 var interval = setInterval(moveleft,10);
 function moveleft(){
     marginleft= marginleft + 2 ;
