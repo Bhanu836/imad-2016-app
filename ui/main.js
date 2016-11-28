@@ -30,6 +30,12 @@ function stop(){
      btn.addEventListener("click" ,moveleft);
        
      }
+      if(i %2 === 0){
+    
+    but2.removeChild(btn);
+     
+       
+     }
 }
 
 but.addEventListener("click" ,stop);
