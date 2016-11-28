@@ -18,9 +18,11 @@ function moveleft(){
 }
 imgo.addEventListener("click", moveleft);
 function stop(){
+     window.clearInterval(interval);
+     
       i=i+1;
      if(i %2 !== 0){
-     window.clearInterval(interval);
+    
     
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
@@ -28,11 +30,11 @@ function stop(){
      btn.style.zIndex= 1000;
      but2.appendChild(btn);
     btn.setAttribute("id", "bttn");
-     btn.addEventListener("click" ,start );
+    
        
      }
       if(i %2 === 0){
-     window.clearInterval(interval2);
+    
      
     var btn2 = document.getElementById("bttn");
     but2.removeChild(btn2);
@@ -42,7 +44,7 @@ function stop(){
 }
 
 butstop.addEventListener("click" ,stop);
-
+ btn.addEventListener("click" ,start );
 function  start(){
     var interval2 = setInterval(moveleft,90);
      if (i %2 === 0){
