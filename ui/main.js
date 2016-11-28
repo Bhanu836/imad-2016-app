@@ -29,7 +29,7 @@ function stop(){
       
     but2.appendChild(btn);
     btn.setAttribute("id", "bttn");
-     btn.addEventListener("click" ,moveleft);
+     btn.addEventListener("click" ,setInterval(moveleft,10));
        
      }
       if(i %2 === 0){
