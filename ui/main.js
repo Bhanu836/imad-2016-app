@@ -25,14 +25,15 @@ function stop(){
     btn.innerHTML="start";
     btn.style.fontSize ="large";
      btn.style.zIndex= 1000;
+     btn.setAttribute("id", "btn");
       
     but2.appendChild(btn);
      btn.addEventListener("click" ,moveleft);
        
      }
       if(i %2 === 0){
-    
-    but2.removeChild(btn);
+    var btn2 = document.getElementById("btn");
+    but2.removeChild(btn2);
      
        
      }
