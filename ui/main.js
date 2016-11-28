@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 var imgo =document.getElementById("madi");
-var but =document.getElementById("hbutton");
+var butstop =document.getElementById("hbutton");
 var but2 =document.getElementById("but1");
 var marginleft=0;
 var h=0;
@@ -17,23 +17,22 @@ function moveleft(){
 }
 imgo.addEventListener("click", moveleft);
 function stop(){
-   
-    
-     i=i+1;
+      i=i+1;
      if(i %2 !== 0){
-          window.clearInterval(interval);
+     window.clearInterval(interval);
+     
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
     btn.style.fontSize ="large";
      btn.style.zIndex= 1000;
-     
-      
-    but2.appendChild(btn);
+     but2.appendChild(btn);
     btn.setAttribute("id", "bttn");
      btn.addEventListener("click" ,start );
        
      }
       if(i %2 === 0){
+     window.clearInterval(interval);
+     
     var btn2 = document.getElementById("bttn");
     but2.removeChild(btn2);
      
@@ -41,7 +40,7 @@ function stop(){
      }
 }
 
-but.addEventListener("click" ,stop);
+butstop.addEventListener("click" ,stop);
 
 function  start(){
          setInterval(moveleft,10);
