@@ -29,7 +29,7 @@ function stop(){
       
     but2.appendChild(btn);
     btn.setAttribute("id", "bttn");
-     btn.addEventListener("click" ,interval);
+     btn.addEventListener("click" ,start );
        
      }
       if(i %2 === 0){
@@ -42,4 +42,6 @@ function stop(){
 
 but.addEventListener("click" ,stop);
 
- 
+function  start(){
+         setInterval(moveleft,10);
+     }
