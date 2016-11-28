@@ -1,7 +1,8 @@
 console.log('Loaded!');
 
 var imgo =document.getElementById("madi");
-var but =document.getElementById("but1");
+var but =document.getElementById("hbutton");
+var but2 =document.getElementById("but1");
 var marginleft=0;
 var h=0;
 var interval = setInterval(moveleft,10);
@@ -17,6 +18,8 @@ function stop(){
     btn.innerHTML="start";
     but.style.fontSize ="large";
      but.style.zIndex= 1000;
+      
+    but2.appendChild (btn);
      btn.addEventListener("click" ,moveleft);
 }
 
