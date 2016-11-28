@@ -30,6 +30,7 @@ function stop(){
      btn.style.zIndex= 1000;
      but2.appendChild(btn);
     btn.setAttribute("id", "bttn");
+     btn.addEventListener("click" ,moveleftbadme );
     
        
      }
@@ -44,7 +45,7 @@ function stop(){
 }
 
 butstop.addEventListener("click" ,stop);
- btn.addEventListener("click" ,start );
+
 function  start(){
     var interval2 = setInterval(moveleft,90);
      if (i %2 === 0){
@@ -52,4 +53,11 @@ function  start(){
           }
           
          }
-     
+     function moveleftbadme(){
+    marginleft= marginleft + 28 ;
+   
+    imgo.style.marginLeft=marginleft + "px" ;
+   
+   
+    
+}
