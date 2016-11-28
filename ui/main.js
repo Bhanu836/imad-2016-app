@@ -16,10 +16,10 @@ function stop(){
     window.clearInterval(interval);
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
-    but.style.fontSize ="large";
-     but.style.zIndex= 1000;
+    btn.style.fontSize ="large";
+     btn.style.zIndex= 1000;
       
-    but2.appendChild (btn);
+    but2.appendChild(btn);
      btn.addEventListener("click" ,moveleft);
 }
 
