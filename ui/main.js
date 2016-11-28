@@ -17,10 +17,11 @@ function moveleft(){
 }
 imgo.addEventListener("click", moveleft);
 function stop(){
-    window.clearInterval(interval);
+   
     
      i=i+1;
      if(i %2 !== 0){
+          window.clearInterval(interval);
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
     btn.style.fontSize ="large";
