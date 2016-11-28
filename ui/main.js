@@ -21,10 +21,7 @@ function stop(){
       i=i+1;
      if(i %2 !== 0){
      window.clearInterval(interval);
-     if( i >2)
-    { 
-        window.clearInterval(interval2);
-    }
+    
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
     btn.style.fontSize ="large";
@@ -47,9 +44,10 @@ function stop(){
 butstop.addEventListener("click" ,stop);
 
 function  start(){
-     
-         var interval2 = setInterval(moveleft,90);
-         if (i %2 !== 0){
+    var interval2 = setInterval(moveleft,90);
+     if (i %2 === 0){
           window.clearInterval(interval2);
+          }
+          
          }
-     }
+     
