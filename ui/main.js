@@ -43,6 +43,6 @@ function stop(){
 butstop.addEventListener("click" ,stop);
 
 function  start(){
-     var interval2  = setInterval(moveleft,1000);
+     var interval2  = setInterval(moveleft,100);
         btn.removeEventListener("click" ,start );  
      }
