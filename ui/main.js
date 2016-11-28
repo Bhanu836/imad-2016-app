@@ -31,7 +31,7 @@ function stop(){
        
      }
       if(i %2 === 0){
-     window.clearInterval(interval);
+     window.clearInterval(interval2);
      
     var btn2 = document.getElementById("bttn");
     but2.removeChild(btn2);
