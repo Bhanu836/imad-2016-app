@@ -20,12 +20,12 @@ function stop(){
     window.clearInterval(interval);
     
      i=i+1;
-     if(i%2 !== 0){
+     if(i %2 !== 0){
     var btn = document.createElement("BUTTON");
     btn.innerHTML="start";
     btn.style.fontSize ="large";
      btn.style.zIndex= 1000;
-    but2.removechild(but);  
+      
     but2.appendChild(btn);
      btn.addEventListener("click" ,moveleft);
        
