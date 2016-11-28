@@ -42,7 +42,7 @@ y=y-1;
 request=requestAnimationFrame(draw);
 if(be >300){
   
-  cancelRequestAnimationFrame(request);
+ window.cancelAnimationFrame(request);
 }
 }
 draw();
