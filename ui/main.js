@@ -16,6 +16,7 @@ function stop(){
     but.innerHTML="start";
     but.style.fontSize ="large";
      but.style.zIndex= 1000;
+     but1.addEventListener("click" ,moveleft);
 }
 
 but1.addEventListener("click" ,stop);
