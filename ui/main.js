@@ -10,7 +10,7 @@ function moveleft(){
     marginleft= marginleft + 2 ;
    
     imgo.style.marginLeft=marginleft + "px" ;
-    var interval = setInterval(moveleft,10);
+   
     var btn3 = document.createElement("BUTTON");
     btn3.innerHTML="stop";
     btn3.style.fontSize ="large";
@@ -34,3 +34,4 @@ function stop(){
 
 but.addEventListener("click" ,stop);
 
+ var interval = setInterval(moveleft,10);
