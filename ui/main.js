@@ -28,7 +28,7 @@ function stop(){
     but2.removechild(but);  
     but2.appendChild(btn);
      btn.addEventListener("click" ,moveleft);
-      var interval = setInterval(moveleft,10);   
+       
      }
 }
 
