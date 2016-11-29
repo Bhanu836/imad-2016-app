@@ -1,3 +1,7 @@
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
+
 
 var pool =require('pg').Pool;
 
@@ -8,7 +12,7 @@ var config = {
     port:'5432',
     password: process.env.DB_PASSWORD
     };
-    app.get('/article-db', function(req, res){
+    app.get('/user-db', function(req, res){
     pool.query('SELECT * FROM user',function(err,result){
         if(err){
             res.status(500).send(err.toString());
