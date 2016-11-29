@@ -10,19 +10,3 @@ var config = {
     password: process.env.DB_PASSWORD
     };
 var pool = new pool(config);
-app.get('/corct1.php', function (req, res) {
-  res.sendFile(path.join(__dirname, 'corct1.php'));
-});
-
-app.get('/user-db', function(req, res){
-    pool.query('SELECT * FROM user',function(err,result){
-        if(err){
-            res.status(500).send(err.toString());
-         }
-         else{
-             res.send(JSON.stringify(result));
-             
-         }
-        
-    });
-});
