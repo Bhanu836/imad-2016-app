@@ -12,6 +12,9 @@ var config = {
     port:'5432',
     password: process.env.DB_PASSWORD
     };
+    var app = express();
+app.use(morgan('combined'));
+
     app.get('/user-db', function(req, res){
     pool.query('SELECT * FROM user',function(err,result){
         if(err){
