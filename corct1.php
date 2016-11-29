@@ -17,4 +17,4 @@
 			<li>Price (USD):</li><li><input type="text" name="price" /></li> <li><input type="submit" /></li> 
 		</form> </ul> </body> </html>
 <?php $db = pg_connect("host=db.imad.hasura-app.io port=5432 dbname=bhanu836 user=bhanu836 password=db-bhanu836-69865");
-$query = "INSERT INTO book VALUES ('$_POST[bookid]','$_POST[book_name]', '$_POST[author]','$_POST[publisher]','$_POST[dop]', '$_POST[price]')"; $result = pg_query($query); ?> 					
+$query = "INSERT INTO user VALUES ('$_POST[bookid]','$_POST[book_name]', '$_POST[author]','$_POST[publisher]','$_POST[dop]', '$_POST[price]')"; $result = pg_query($query); ?> 					
