@@ -51,15 +51,12 @@ draw();
 
 
 //program for myConvasb
-var mouseX;
-    var mouseY;
+
  var canvasb = document.getElementById("myCanvasb");
     var ctxb = canvasb.getContext("2d");
-    
-    function getMousePosition(e){
-     mouseX = e.clientX;
-     mouseY = e.clientY;
-    }
+    var mouseX= e.clientX;
+    var mouseY = e.clientY;
+   
  function drawb() {
      var my_gradient=ctx.createLinearGradient(0,0,170,0);
       ctxb.beginPath();
