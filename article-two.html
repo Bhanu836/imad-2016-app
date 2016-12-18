@@ -59,14 +59,14 @@ draw();
      function getMousePos(canvasb, evt) {
         var rect = canvas.getBoundingClientRect();
         return {
-          mouseX: evt.clientX - rect.left,
-          mouseY: evt.clientY - rect.top
+          mouseX: evt.clientX ,
+          mouseY: evt.clientY ,
         };
    
  function drawb() {
      var my_gradient=ctx.createLinearGradient(0,0,170,0);
       ctxb.beginPath();
-    ctxb.ellipse(mouseX, mouseY, mouseX, mouseY,10 * Math.PI/180 , 0, 2 * Math.PI);
+    ctxb.ellipse(mouseX, mouseY, mouseX-50, mouseY-50,10 * Math.PI/180 , 0, 2 * Math.PI);
      ctxb.stroke();
     ctxb.fillstyle="yellow";
     ctxb.fill();
