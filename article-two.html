@@ -32,6 +32,7 @@ function draw(){
 ctx.beginPath();
 ctx.rect(0, 300, 998, 100);
 ctx.stroke();
+
 ctx.fillStyle="green";
 ctx.fill();
 sunSize=sunSize+1;
@@ -54,7 +55,9 @@ draw();
     var ctxb = canvasb.getContext("2d");
     
  function drawb() {
-    ctxb.fill(mouseX, mouseY, 0);
+     var my_gradient=ctx.createLinearGradient(0,0,mousex,mousey);
+    ctxb.fillstyle="my_gradient";
+    ctx.fill();
      ctxb.stroke(255, 0, 0);
     ctxb.ellipse(mouseX, mouseY, mouseX, mouseY);
    
