@@ -47,12 +47,25 @@ if(be >300){
 }
 draw();
 
+
+
+//program for myConvasb
+ var canvasb = document.getElementById("myCanvasb");
+    var ctxb = canvasb.getContext("2d");
+    
+ function drawb() {
+    ctxb.fill(mouseX, mouseY, 0);
+     ctxb.stroke(255, 0, 0);
+    ctxb.ellipse(mouseX, mouseY, mouseX, mouseY);
+   
+}
+drawb();
 }
 </script>
             
   <canvas id="myCanvas" width="1000" height="400" style="border:1px solid #000000;">
 </canvas>      
- <canvas id="myCanvasb" width="1000" height="400" style="border:1px solid #000000;">
+ <canvas id="myCanvasb" width="1000" height="350" style="border:1px solid #000000;">
      
 </canvas>      
                 
