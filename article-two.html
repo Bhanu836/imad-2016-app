@@ -54,8 +54,12 @@ draw();
  var canvasb = document.getElementById("myCanvasb");
     var ctxb = canvasb.getContext("2d");
     
+    function getMousePosition(e){
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+    }
  function drawb() {
-     var my_gradient=ctx.createLinearGradient(0,0,mousex,0);
+     var my_gradient=ctx.createLinearGradient(0,0,mouseX,0);
     ctxb.fillstyle="my_gradient";
     ctx.fill();
      ctxb.stroke(255, 0, 0);
