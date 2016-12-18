@@ -56,22 +56,23 @@ draw();
     var ctxb = canvasb.getContext("2d");
     var mouseX;
     var mouseY;
-     function getMousePos(canvasb, evt) {
+     function getMousePos(canvas, evt) {
         
         return 
           mouseX: evt.clientX ;
           mouseY: evt.clientY ;
         }
+        var Pos = getMousePos(canvasb, evt);
    
  function drawb() {
      var my_gradient=ctx.createLinearGradient(0,0,170,0);
       ctxb.beginPath();
-    ctxb.ellipse(mouseX, mouseY, mouseX-50, mouseY-50,10 * Math.PI/180 , 0, 2 * Math.PI);
+    ctxb.ellipse(Pos.mouseX, Pos.mouseY, Pos.mouseX-50, Pos.mouseY-50,10 * Math.PI/180 , 0, 2 * Math.PI);
      ctxb.stroke();
     ctxb.fillstyle="yellow";
     ctxb.fill();
     
-    console.log(mouseX);
+    console.log(Pos.mouseX);
    
 }
 drawb();
