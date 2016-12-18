@@ -56,12 +56,12 @@ draw();
     var ctxb = canvasb.getContext("2d");
     var mouseX;
     var mouseY;
-    function getMousePosition(ctxb.e){
-     mouseX = ctxb.e.clientX;
-    mouseY = ctxb.e.clientY;
-    console.log("mouseX = " + mouseX);
-    console.log("mouseY = " + mouseY);
-}
+     function getMousePos(canvasb, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          mouseX: evt.clientX - rect.left,
+          mouseY: evt.clientY - rect.top
+        };
    
  function drawb() {
      var my_gradient=ctx.createLinearGradient(0,0,170,0);
