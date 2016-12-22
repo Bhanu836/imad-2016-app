@@ -13,6 +13,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
+app.use(express.bodyParser());
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -57,6 +58,9 @@ app.get('/ui/experimental.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'experimental.js'));
 });
 
+app.post('/user',function(req,res){
+    res.send("submitted name is " +req.body.fname);
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
