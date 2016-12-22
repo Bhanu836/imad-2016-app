@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-const router = express.Router();
+
 var pool =require('pg').Pool;
 
 var config = {
@@ -14,7 +14,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
+const router = express.Router();
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
