@@ -14,13 +14,13 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-const router = express.Router();
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-
+var pool = new pool(config);
 
 app.get('/article-db', function(req, res){
     pool.query('SELECT * FROM user',function(err,result){
@@ -60,26 +60,6 @@ app.get('/ui/experimental.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'experimental.js'));
 });
 
-app.post('/user', function (req, res, next) {  
-  const user = req.body;
-
-  pg.connect(config, function (err, client, done) {
-    if (err) {
-      // pass the error to the express error handler
-      return next(err);
-    }
-    client.query('INSERT INTO college (name, collegename,rating) VALUES (fname,collegename,rating);', function (err, result) {
-      done() ;//this done callback signals the pg driver that the connection can be closed or returned to the connection pool
-
-      if (err) {
-        // pass the error to the express error handler
-        return next(err);
-      }
-
-      res.send(200);
-    });
-  });
-});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
