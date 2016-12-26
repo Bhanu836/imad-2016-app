@@ -35,7 +35,7 @@ var httpserver = http.createServer(function(req,res){
 
 switch(req.method){
 case "GET":
-if (req.url ==='/'){
+if (req.url ==='/addsum'){
 getHome(req,res);
 }
 else if(req.url === "/calc"){
@@ -71,4 +71,4 @@ default:
 get405(req,res);
 break;
 }});
-httpserver.listen(8086);
+httpserver.listen(8080);
