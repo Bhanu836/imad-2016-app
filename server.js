@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
+var qs = require("querystring");
 var pool =require('pg').Pool;
 
 var config = {
@@ -67,16 +67,18 @@ app.use(bodyParser.urlencoded({
 /**bodyParser.json(options)
  * Parses the text as JSON and exposes the resulting object on req.body.
  */
-
+  app.use(bodyParser.json());
 
 
 app.post('/ui/article-one.html', function(req, res){
     req.on('data',function(data){
-        app.use(bodyParser.json());
-    console.log(req.body.user.name);
-    console.log(req.body.user.email);
-    
+      var reqbody ="";
+      reqbody += data;
+      var formdata = qs.parse('reqbody');
+    console.log(formdata.user.name.toString());
+    console.log(formdata.user.email.toString());
     });
+    
      req.on('end',function(data){
      res.end();
      });
