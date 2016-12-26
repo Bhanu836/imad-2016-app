@@ -56,13 +56,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
 
-
-app.use(bodyParser.json());
-
+bodyParser = require('body-parser');
 
 
 app.post('/ui/article-one.html', function(request, response){
