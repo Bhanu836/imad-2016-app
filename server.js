@@ -76,10 +76,10 @@ app.post('/ui/article-one.html', function(req, res){
  console.log(req.body.name);
        console.log(req.body.email);
     pool.query('INSERT INTO bag(username,email) VALUES($1,$2)',[req.body.name, req.body.name]);
-    });
+   
   res.end();
    
-
+ });
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
