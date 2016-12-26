@@ -58,10 +58,7 @@ app.get('/ui/main.js', function (req, res) {
 
 
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
+app.use(express.bodyParser());
 
 
 app.post('/ui/article-one.html', function(request, response){
