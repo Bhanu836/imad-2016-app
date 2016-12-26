@@ -67,11 +67,12 @@ app.use(bodyParser.urlencoded({
 /**bodyParser.json(options)
  * Parses the text as JSON and exposes the resulting object on req.body.
  */
-app.use(bodyParser.json());
+
 
 
 app.post('/ui/article-one.html', function(req, res){
     req.on('data',function(data){
+        app.use(bodyParser.json());
     console.log(req.body.user.name);
     console.log(req.body.user.email);
     
