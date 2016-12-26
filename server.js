@@ -60,7 +60,7 @@ app.get('/ui/main.js', function (req, res) {
 bodyParser = require('body-parser');
 
 
-app.post('/ui/article-one.html', function(request, response){
+app.post('/ui/article-one.html', function(req, res){
     console.log(req.body.user.name);
     console.log(req.body.user.email);
 });
