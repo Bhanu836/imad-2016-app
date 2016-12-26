@@ -77,7 +77,7 @@ app.post('/ui/article-one.html', function(req, res){
         var sqlStmt   = "UPDATE bag "
                   + "SET username = $1 "
                   + "SET email = $2";
-        var query = pool.query( sqlStmt, null, function(err, result) {
+         pool.query( sqlStmt, null, function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
@@ -85,7 +85,7 @@ app.post('/ui/article-one.html', function(req, res){
       }
       
     });
-  
+  res.end();
    
 });
 
