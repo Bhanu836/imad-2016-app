@@ -80,7 +80,7 @@ app.post('/ui/article-one.html', function(req, res){
     var sqlStmt   = "INSERT INTO bag( username, email,) ";
         sqlStmt  += "VALUES ( $1, $2)";
     
-    var query = client.query( sqlStmt, null, function(err, result) {
+    var query = pool.query( sqlStmt, null, function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
