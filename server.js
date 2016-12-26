@@ -23,7 +23,9 @@ app.get('/', function (req, res) {
 var pool = new pool(config);
 
 app.get('/article-db', function(req, res){
-    pool.query('SELECT * FROM user',function(err,result){
+    
+    // postgredatabase query all below codes
+     pool.query('SELECT * FROM user',function(err,result){
         if(err){
             res.status(500).send(err.toString());
          }
@@ -69,8 +71,10 @@ app.use(bodyParser.json());
 
 
 app.post('/ui/article-one.html', function(req, res){
-    console.log(req.body.name);
-    console.log(req.body.email);
+    req.on('end',function(data){
+    console.log(req.body.user.name);
+    console.log(req.body.user.email);
+    });
 });
 
 
