@@ -71,10 +71,14 @@ app.use(bodyParser.json());
 
 
 app.post('/ui/article-one.html', function(req, res){
-    req.on('end',function(data){
+    req.on('data',function(data){
     console.log(req.body.user.name);
     console.log(req.body.user.email);
+    
     });
+     req.on('end',function(data){
+     res.end();
+     });
 });
 
 
