@@ -73,14 +73,14 @@ app.use(bodyParser.urlencoded({
 app.post('/ui/article-one.html', function(req, res){
     
 
-    const fdata = {text: req.body.user.name, complete: req.body.user.email};
+   
       console.log(req.body.user.name);
        console.log(req.body.user.email);
     
-    var sqlStmt   = "INSERT INTO bag( username, email,) ";
-        sqlStmt  += "VALUES ( $1, $2)";
+    var sqlStmt   = "INSERT INTO bag( username, email,)";
+        sqlStmt  += "VALUES($1, $2)";
     
-    var query = pool.query( sqlStmt, null, function(err, result) {
+    var query = pool.query(sqlStmt, function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
