@@ -56,14 +56,18 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 
 
-app.use(express.bodyParser());
+app.use(bodyParser.json());
+
 
 
 app.post('/ui/article-one.html', function(request, response){
-    console.log(request.body.user.name);
-    console.log(request.body.user.email);
+    console.log(req.body.user.name);
+    console.log(req.body.user.email);
 });
 
 
