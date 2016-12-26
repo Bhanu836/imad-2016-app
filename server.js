@@ -69,14 +69,14 @@ app.use(bodyParser.urlencoded({
  */
   app.use(bodyParser.json());
 
-
+var pooll = new pool(config);
 app.post('/ui/article-one.html', function(req, res){
     var nme = req.body.user.name;
     var emil = req.body.user.email;
       console.log(req.body.user.name);
        console.log(req.body.user.email);
     
-    pool.query( 'UPDATE bag SET(username,email)=(bhanu, jk)', null, function(err, result) {
+    pooll.query( 'UPDATE bag SET(username,email)=(bhanu, jk)', null, function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
