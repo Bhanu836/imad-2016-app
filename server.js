@@ -72,9 +72,7 @@ app.use(bodyParser.urlencoded({
 
 app.post('/ui/article-one.html', function(req, res){
     
-
-   
-      console.log(req.body.user.name);
+ console.log(req.body.user.name);
        console.log(req.body.user.email);
     
     var sqlStmt   = "INSERT INTO bag( username, email,)";
