@@ -74,12 +74,14 @@ app.post('/ui/article-one.html', function(req, res){
     req.on('data',function(data){
       var reqbody ="";
       reqbody += data;
-      var formdata = qs.parse('reqbody');
-    console.log(formdata.user.name.toString());
-    console.log(formdata.user.email.toString());
+     
+  
     });
     
      req.on('end',function(data){
+          var formdata = qs.parse('reqbody');
+           console.log(formdata.user.name.toString());
+    console.log(formdata.user.email.toString());
      res.end();
      });
 });
