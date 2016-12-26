@@ -1,4 +1,11 @@
-var http = require("http");
+var express = require('express');
+var morgan = require('morgan');
+var path = require('path');
+
+var app = express();
+app.use(morgan('combined'));
+
+
 var qs = require("querystring");
 function getHome(req,res){
 res.writeHead(200,{"Content-Type": "text/html"});
@@ -31,7 +38,7 @@ res.writeHead(200,{"Content-Type": "text/html"});
 gettmlform(req,res,formdata);
 
 }
-var httpserver = http.createServer(function(req,res){
+var app = http.createServer(function(req,res){
 
 switch(req.method){
 case "GET":
@@ -71,4 +78,9 @@ default:
 get405(req,res);
 break;
 }});
-httpserver.listen(8080);
+
+
+var port = 8080; // Use 8080 for local development because you might already have apache running on 80
+app.listen(8080, function () {
+  console.log(`IMAD course app listening on port ${port}!`);
+});
