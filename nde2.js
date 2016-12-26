@@ -38,7 +38,9 @@ res.writeHead(200,{"Content-Type": "text/html"});
 gettmlform(req,res,formdata);
 
 }
-var app = http.createServer(function(req,res){
+app.on('request', function(request, response) {
+  // the same kind of magic happens here!
+
 
 switch(req.method){
 case "GET":
