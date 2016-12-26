@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 });
 
 
-
+var pool = new pool(config);
 app.get('/article-db', function(req, res){
     
     // postgredatabase query all below codes
