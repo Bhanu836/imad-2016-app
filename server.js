@@ -60,6 +60,16 @@ app.get('/nde2.js', function (req, res) {
   res.sendFile(path.join(__dirname,  'nde2.js'));
 });
 
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
+
+app.post('/ui/article-one.html', function(request, response){
+    console.log(request.body.user.name);
+    console.log(request.body.user.email);
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
