@@ -71,10 +71,11 @@ app.use(bodyParser.urlencoded({
 
 
 app.post('/ui/article-one.html', function(req, res){
-    
+    var nme = req.body.user.name;
+     var emil = req.body.user.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag (username,email)VALUES (name,email)', function(err, result) {
+    pool.query('INSERT INTO bag (username,email)VALUES(nme,emil)', function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
