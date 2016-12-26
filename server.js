@@ -71,12 +71,16 @@ app.use(bodyParser.urlencoded({
 
 
 app.post('/ui/article-one.html', function(req, res){
-    var nme = req.body.user.name;
-    var emil = req.body.user.email;
+    
+
+    const fdata = {text: req.body.user.name, complete: req.body.user.email};
       console.log(req.body.user.name);
        console.log(req.body.user.email);
     
-    pool.query(EXECUTE format('UPDATE bag SET(username,email) = ($1,$2)',function(err, result) {
+    var sqlStmt   = "INSERT INTO bag( username, email,) ";
+        sqlStmt  += "VALUES ( $1, $2)";
+    
+    var query = client.query( sqlStmt, null, function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
