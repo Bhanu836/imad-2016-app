@@ -72,8 +72,19 @@ app.use(bodyParser.urlencoded({
 
 app.post('/ui/article-one.html', function(req, res){
     
-      console.log(req.body.user.name)
-       console.log(req.body.user.email)
+      console.log(req.body.user.name);
+       console.log(req.body.user.email);
+        var sqlStmt   = "UPDATE bag "
+                  + "SET username = $1 "
+                  + "SET email = $2";
+        var query = pool.query( sqlStmt, null, function(err, result) {
+      if ( err ) {
+        console.log(err);
+      } else {
+        console.log(result);
+      }
+      
+    });
   
    
 });
