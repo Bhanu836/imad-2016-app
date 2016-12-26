@@ -76,7 +76,7 @@ app.post('/ui/article-one.html', function(req, res){
       console.log(req.body.user.name);
        console.log(req.body.user.email);
     
-    pool.query('UPDATE bag SET(username,email) = ("bhanu", "jk")',function(err, result) {
+    pool.query('UPDATE bag SET(username,email) = ($1, $2)',function(err, result) {
       if ( err ) {
         console.log(err);
       } else {
