@@ -71,19 +71,11 @@ app.use(bodyParser.urlencoded({
 
 
 app.post('/ui/article-one.html', function(req, res){
-    req.on('data',function(data){
-      var reqbody = "";
-      reqbody += data;
-     
-  
-    });
     
-     req.on('end',function(data){
-          var formdata = qs.parse("reqbody");
-           console.log(stringify(formdata.user.name));
-    console.log(Stringify(formdata.user.email));
-     res.end();
-     });
+      console.log(req.body.user.name)
+       console.log(req.body.user.email)
+  
+   
 });
 
 
