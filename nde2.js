@@ -35,7 +35,7 @@ var httpserver = http.createServer(function(req,res){
 
 switch(req.method){
 case "GET":
-if (req.url ==='/addsum'){
+if (req.url ==='/'){
 getHome(req,res);
 }
 else if(req.url === "/calc"){
