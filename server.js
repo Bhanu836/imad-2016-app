@@ -58,18 +58,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
- if(req.method==="POST" && req.url === "/ui/article-one.html"){
-var reqBody = "";
-req.on('data',function(data){
-reqBody += data;
-    if(reqBody.length > 1e7)
-{
-res.write(413,"memory full",{"Content-Type":"text/html"});
-res.write("<html><head><title>413</title></head><body>you exceeded memory limit</body></html>");
-res.end();
-}
-});
-}
+ 
 
 bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
@@ -84,7 +73,18 @@ app.use(bodyParser.urlencoded({
 
 app.post('/ui/article-one.html', function(req, res){
     
-  
+  if(req.method==="POST" && req.url === "/ui/article-one.html"){
+var reqBody = "";
+req.on('data',function(data){
+reqBody += data;
+    if(reqBody.length > 1e7)
+{
+res.write(413,"memory full",{"Content-Type":"text/html"});
+res.write("<html><head><title>413</title></head><body>you exceeded memory limit</body></html>");
+res.end();
+}
+});
+}
     var nme = req.body.name;
      var emil = req.body.email;
  console.log(req.body.name);
