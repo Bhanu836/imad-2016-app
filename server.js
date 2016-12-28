@@ -124,7 +124,7 @@ res.end();
        var ctywt = req.body.citywt;
         var collagewt = req.body.collagewt;
 
-pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)values ($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.citywt,req.collagewt]);
+pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.body.citywt,req.body.collagewt]);
 
     
     
