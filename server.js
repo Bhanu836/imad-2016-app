@@ -88,8 +88,7 @@ res.end();
 }
 });
 }
-var nameq =qs.parse(req.name);
-var eq =qs.parse(req.email);
+
 
     var nme = req.body.name;
      var emil = req.body.email;
@@ -125,7 +124,7 @@ res.end();
        var ctywt = req.body.citywt;
         var collagewt = req.body.collagewt;
 
-pool.query('INSERT INTO stuteacher(studentname,studentcity,studentname,wrstteachername,wrstteachercity,wrstteachercolgename)values ($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.citywt,req.collagewt]);
+pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)values ($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.citywt,req.collagewt]);
 
     
     
