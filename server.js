@@ -88,12 +88,14 @@ res.end();
 }
 });
 }
-var nameq =qs.parse(req)
+var nameq =qs.parse(req.name);
+var eq =qs.parse(req.email);
+
     var nme = req.body.name;
      var emil = req.body.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag(username,email) VALUES(nameq.name,nameq.email)');
+    pool.query('INSERT INTO bag(username,email) VALUES(nameq,eq)');
    
   res.end();
    
