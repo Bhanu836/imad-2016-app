@@ -121,7 +121,11 @@ res.end();
        var ctywt = req.body.citywt;
         var collagewt = req.body.collagewt;
  console.log(req.body.stuname);
-       
+ console.log(req.body.stucity);
+     console.log(req.body.namewt);
+     console.log(req.body.stucollage);
+     console.log(req.body.collagewt);
+     console.log(req.body.citywt);
     pool.query('INSERT INTO STU_TEACHER(studentname,studentcity,studentcolge_name,wrstteacher_name,wrstteacher_city,wrstteacher_colge_name) VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname, req.body.stucity, req.body.stucollage, req.body.namewt ,req.body.citywt, req.body.collagewt]);
     
     req.on('end',function(stunme,stucollage,stucity,namewt){
