@@ -126,7 +126,7 @@ res.end();
      console.log(req.body.stucollage);
      console.log(req.body.collagewt);
      console.log(req.body.citywt);
-    pool.query('INSERT INTO STU_TEACHER(studentname,studentcity,studentcolge_name,wrstteacher_name,wrstteacher_city,wrstteacher_colge_name) VALUES(stunme,stucty,stucollage,namewt,ctywt,collagewt)');
+    pool.query('INSERT INTO STU_TEACHER(id,studentname,studentcity,studentcolge_name,wrstteacher_name,wrstteacher_city,wrstteacher_colge_name) VALUES(,stunme,stucty,stucollage,namewt,ctywt,collagewt)');
     
     req.on('end',function(stunme,stucollage,stucity,namewt){
         res.write(200,{"Content-Type":"text/html"});
