@@ -95,7 +95,8 @@ var eq =qs.parse(req.email);
      var emil = req.body.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag(username,email) VALUES(nameq,eq)');
+    pool.query('INSERT INTO bag(username,email) VALUES($1, $2)',
+    [req.body.text, req.body.email]);
    
   res.end();
    
@@ -129,7 +130,7 @@ res.end();
      console.log(req.body.stucollage);
      console.log(req.body.collagewt);
      console.log(req.body.citywt);
-    pool.query('INSERT INTO STU_TEACHER(id,studentname,studentcity,studentcolge_name,wrstteacher_name,wrstteacher_city,wrstteacher_colge_name) VALUES(DEFAULT,$1,$2,$3,$4,$5,$6)',[req.body.stuname, req.body.stucity, req.body.stucollage, req.body.namewt ,req.body.citywt, req.body.collagewt]);
+    pool.query('INSERT INTO STU_TEACHER(studentname,studentcity,studentcolge_name,wrstteacher_name,wrstteacher_city,wrstteacher_colge_name)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname, req.body.stucity, req.body.stucollage, req.body.namewt ,req.body.citywt, req.body.collagewt]);
     
     req.on('end',function(stunme,stucollage,stucity,namewt){
         res.write(200,{"Content-Type":"text/html"});
