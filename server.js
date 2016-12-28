@@ -95,8 +95,8 @@ var eq =qs.parse(req.email);
      var emil = req.body.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag(username,email) VALUES($1, $2)',
-    [req.body.text, req.body.email]);
+    pool.query('INSERT INTO bag(username,email)VALUES($1, $2)',
+    [req.body.name, req.body.email]);
    
   res.end();
    
