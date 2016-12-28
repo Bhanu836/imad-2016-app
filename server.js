@@ -92,7 +92,7 @@ res.end();
      var emil = req.body.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag(username,email) VALUES(req.body.name,req.body.email)');
+    pool.query('INSERT INTO bag(username,email) VALUES(name,email)');
    
   res.end();
    
