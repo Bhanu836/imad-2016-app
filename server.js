@@ -98,6 +98,40 @@ res.end();
    
  });
  
+ /* code for database of worst teacher */
+ 
+ app.post('/ui/dbse.html', function(req, res){
+    
+  if(req.method==="POST" && req.url === "/ui/dbse.html"){
+var reqBody = "";
+req.on('data',function(data){
+reqBody += data;
+    if(reqBody.length > 1e7)
+{
+res.write(413,"memory full",{"Content-Type":"text/html"});
+res.write("<html><head><title>413</title></head><body>you exceeded memory limit</body></html>");
+res.end();
+}
+});
+}
+    var stunme = req.body.stuname;
+     var stucty = req.body.stucity;
+      var stucollage = req.body.stucollage;
+       var namewt = req.body.namewt;
+       var ctywt = req.body.citywt;
+        var collagewt = req.body.collagewt;
+ console.log(req.body.stuname);
+       
+    pool.query('INSERT INTO stu_teacher(stunme,stucty,stucollage,namewt,ctywt,collagewt) VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname, req.body.stucity,req.body.stucollage,req.body.namewt,req.body.citywt,req.body.collagewt]);
+    res.write(200,{"Content-Type":"text/html"});
+    res.on('end',function(){
+        res.write("<html>"+"<head>"+"<body>"+"hi"+stunme+"from"+stucollage+" "+stucity+"<br/>"+"your worst teacher name is"+"namewt");
+    });
+   
+  res.end();
+   
+ });
+ 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
