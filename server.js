@@ -53,6 +53,9 @@ app.get('/ui/article-one.html', function (req, res) {
 app.get('/article-two.html', function (req, res) {
   res.sendFile(path.join(__dirname,  'article-two.html'));
 });
+app.get('/ui/dbse.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'dbse.html'));
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
