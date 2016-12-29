@@ -59,7 +59,7 @@ app.get('/article-two.html', function (req, res) {
 app.get('/ui/dbse.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dbse.html'));
 });
-
+x
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
@@ -139,6 +139,36 @@ pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrst
  });
  
 
+ app.post('/ui/dbse.html', function(req, res){
+    
+  if(req.method==="POST" && req.url === "/ui/dbse.html"){
+var reqBody = "";
+req.on('data',function(data){
+reqBody += data;
+    if(reqBody.length > 1e7)
+{
+res.write(413,"memory full",{"Content-Type":"text/html"});
+res.write("<html><head><title>413</title></head><body>you exceeded memory limit</body></html>");
+res.end();
+}
+});
+}
+    var stunme = req.body.stuname;
+     var stucty = req.body.stucity;
+      var stucollage = req.body.stucollage;
+       
+
+pool.query('INSERT INTO stuteacher(stuname,stucity,stucollage,stuemail,stumobilenumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
+
+ query.on('end',function(){
+    
+    return res.redirect("/ui/reply.html");
+  });
+    
+  res.end();
+   
+ });
+ 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
