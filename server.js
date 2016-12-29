@@ -19,7 +19,8 @@ var pool = new pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   pool.query('UPDATE countv SET count = count + 1;');
-  pool.query('UPDATE countv SET count =VALUES($1)', [new Date()]);
+  var date = new DATE();
+  pool.query('UPDATE countv SET date =VALUES($1)',[date]);
 });
 
 
