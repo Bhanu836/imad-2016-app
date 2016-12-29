@@ -42,6 +42,7 @@ app.get('/article-db', function(req, res){
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+  var count= count+1;
 });
 
 app.get('/ui/madi.png', function (req, res) {
