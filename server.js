@@ -21,6 +21,7 @@ app.get('/', function (req, res) {
   pool.query('UPDATE countv SET count = count + 1;');
   
   pool.query('UPDATE countv SET date =VALUES($1)',[new Date()]);
+  console.log(new Date());
 });
 
 
