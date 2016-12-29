@@ -15,13 +15,14 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
+var pool = new pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  pool.query('UPDATE countv SET count = count + 1;'); 
 });
 
 
-var pool = new pool(config);
+
 app.get('/article-db', function(req, res){
     
     // postgredatabase query all below codes
@@ -42,7 +43,8 @@ app.get('/article-db', function(req, res){
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-  var count= count+1;
+  
+  
 });
 
 app.get('/ui/madi.png', function (req, res) {
