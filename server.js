@@ -108,7 +108,7 @@ res.end();
     pool.query('INSERT INTO bag(username,email,mobno,collagename)VALUES($1, $2, $3, $4)',
     [req.body.name, req.body.email, req.body.stugmobno,req.body.stugcname]);
    
-    query.on('end',function(){
+ req.on('end',function(){
     
     return res.redirect("/ui/rply.html");
   });
