@@ -18,7 +18,8 @@ app.use(morgan('combined'));
 var pool = new pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  pool.query('UPDATE countv SET count = count + 1;'); 
+  pool.query('UPDATE countv SET count = count + 1;');
+  pool.query('udate countv SET count =VALUES($1)', [new Date()]);
 });
 
 
