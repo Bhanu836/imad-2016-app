@@ -60,7 +60,7 @@ app.get('/article-two.html', function (req, res) {
 app.get('/ui/dbse.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dbse.html'));
 });
-x
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
