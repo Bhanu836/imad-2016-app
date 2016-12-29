@@ -64,6 +64,9 @@ app.get('/article-two.html', function (req, res) {
 app.get('/ui/dbse.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dbse.html'));
 });
+app.get('/ui/rply.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'rply.html'));
+});
 
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
@@ -102,9 +105,14 @@ res.end();
      var emil = req.body.email;
  console.log(req.body.name);
        console.log(req.body.email);
-    pool.query('INSERT INTO bag(username,email)VALUES($1, $2)',
-    [req.body.name, req.body.email]);
+    pool.query('INSERT INTO bag(username,email,mobno,collagename)VALUES($1, $2, $3, $4)',
+    [req.body.name, req.body.email, req.body.stugmobno,req.body.stugcname]);
    
+    query.on('end',function(){
+    
+    return res.redirect("/ui/rply.html");
+  });
+    
   res.end();
    
  });
