@@ -18,7 +18,7 @@ app.use(morgan('combined'));
 var pool = new pool(config);
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-  pool.query('UPDATE countv SET count = count + 1;');
+  pool.query('UPDATE countv SET count = count + 1;,date= VALUES($1)',[new Date()]);
   
   pool.query('UPDATE countv SET date = VALUES($1)',[new Date()]);
   console.log(new Date());
