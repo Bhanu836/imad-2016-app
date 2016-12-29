@@ -60,6 +60,10 @@ background-color:silver;
 
 
 }
+#e{
+     background-color: transparent;
+   background: transparent;
+}
 #db{
     color : green;
 }
