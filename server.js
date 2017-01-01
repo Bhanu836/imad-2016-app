@@ -171,7 +171,7 @@ res.end();
       var stucollage = req.body.stucollage;
        
 
-pool.query('INSERT INTO stuteacher(stuname,stucity,stucollage,stuemail,stumobilenumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
+pool.query('INSERT INTO stuteacher(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
 
  query.on('end',function(){
     
