@@ -61,14 +61,12 @@ background-color:silver;
 
 }
 .container-fluid{
-    width: 100%;
-  height:auto;
+  
      background-image: url("http://www.globalrarebooks.net/image/oldman3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
-    padding:2px;
-    margin:3px auto;
-    bottom:100px;
+    
+    bottom:0;
       
 }
 #db{
@@ -89,7 +87,7 @@ width: 100%;
 #inpputbox{
     font-size: 1rem;
     padding: .75rem 1rem;
-    outline: none;
+  
     border: 2px solid #d4d9dd;
     display:block;
     border-radius: 4px;
