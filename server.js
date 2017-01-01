@@ -90,8 +90,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.post('/ui/article-one.html', function(req, res){
-    
-  if(req.method==="POST" && req.url === "/ui/article-one.html"){
+    if(req.method==="POST" && req.url === "/ui/article-one.html"){
 var reqBody = "";
 req.on('data',function(data){
 reqBody += data;
@@ -137,12 +136,7 @@ res.end();
 }
 });
 }
-    var stunme = req.body.stuname;
-     var stucty = req.body.stucity;
-      var stucollage = req.body.stucollage;
-       var namewt = req.body.namewt;
-       var ctywt = req.body.citywt;
-        var collagewt = req.body.collagewt;
+   
 
 pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.body.citywt,req.body.collagewt]);
 
@@ -156,7 +150,7 @@ pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrst
  });
  
 
- app.post('/ui/dbse.html', function(req, res){
+ app.post('/ui/stubook.html', function(req, res){
     
   if(req.method==="POST" && req.url === "/ui/stubook.html"){
 var reqBody = "";
@@ -178,7 +172,7 @@ res.end();
 pool.query('INSERT INTO stuteacher(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
 
  
-  });
+ 
     
   res.end();
    
