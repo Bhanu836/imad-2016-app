@@ -71,6 +71,10 @@ app.get('/ui/rply.html', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+app.get('/ui/stubook.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'stubook.html'));
+});
+
 
  
 
@@ -154,7 +158,7 @@ pool.query('INSERT INTO stuteacher(studentname,studentcity,studentcolgename,wrst
 
  app.post('/ui/dbse.html', function(req, res){
     
-  if(req.method==="POST" && req.url === "/ui/dbse.html"){
+  if(req.method==="POST" && req.url === "/ui/stubook.html"){
 var reqBody = "";
 req.on('data',function(data){
 reqBody += data;
@@ -173,9 +177,7 @@ res.end();
 
 pool.query('INSERT INTO stuteacher(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
 
- query.on('end',function(){
-    
-    return res.redirect("/ui/reply.html");
+ 
   });
     
   res.end();
