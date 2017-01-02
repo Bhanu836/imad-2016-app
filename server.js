@@ -167,7 +167,12 @@ res.end();
     var stunme = req.body.stuname;
      var stucty = req.body.stucity;
       var stucollage = req.body.stucollage;
-       
+       console.log(req.body.stuname);
+       console.log(req.body.stucity);
+       console.log(req.body.stucollage);
+       console.log(req.body.stuemail);
+       console.log(req.body.stumobno);
+       console.log(req.body.booktitle);console.log(req.body.genre);console.log(req.body.authorname);
 
 pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.genre,req.body.authorname]);
 
