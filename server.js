@@ -138,7 +138,7 @@ res.end();
 }
    
 
-pool.query('INSERT INTO stubook(studentname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.body.citywt,req.body.collagewt]);
+pool.query('INSERT INTO stuteacher(studname,studentcity,studentcolgename,wrstteachername,wrstteachercity,wrstteachercolgename)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.namewt,req.body.citywt,req.body.collagewt]);
 
   req.on('end',function(){
     res.write(200,{"Content-Type":"text/html"});  
@@ -169,7 +169,7 @@ res.end();
       var stucollage = req.body.stucollage;
        
 
-pool.query('INSERT INTO stuteacher(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
+pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,stuemail,stumobnumber,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6,$7,$8)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.bookgenre,req.body.bookauthorname]);
 
  
  
