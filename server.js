@@ -173,7 +173,7 @@ res.end();
       
        console.log(req.body.booktitle);console.log(req.body.genre);console.log(req.body.authorname);
 
-pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.stuemail,req.body.stumobno,req.body.booktitle,req.body.genre,req.body.authorname]);
+pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.booktitle,req.body.genre,req.body.authorname]);
 
  
  
