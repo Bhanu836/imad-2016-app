@@ -65,8 +65,8 @@ background-color:silver;
      background-image: url("http://www.globalrarebooks.net/image/oldman3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+    position: absolute;
     
-    bottom:0;
       
 }
 #db{
