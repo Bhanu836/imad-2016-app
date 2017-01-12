@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
   
   
-  pool.query('UPDATE countv SET date = VALUES($1)',[new Date("2015-03-25T12:00:00Z")]);
+ 
   pool.query('UPDATE countv SET count = count + 1;');
   console.log(new Date());
 });
