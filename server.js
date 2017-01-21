@@ -37,7 +37,7 @@ app.get('/article-db', function(req, res){
             res.status(500).send(err.toString());
          }
          else{
-             res.send(JSON.stringify(result).rows[1].stucity);
+             res.send(JSON.stringify(result));
              
          }
         
