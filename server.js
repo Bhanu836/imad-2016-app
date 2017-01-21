@@ -34,7 +34,7 @@ app.get('/article-db', function(req, res){
     // postgredatabase query all below codes
      pool.query('SELECT * FROM stubook',function(err,result){
         if(err){
-           
+            res.status(500).send(err.toString());
          }
          else{
              res.send(JSON.stringify(result));
