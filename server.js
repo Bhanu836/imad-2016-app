@@ -183,10 +183,12 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
      for(var i=0;i<3;i++){
          var bookdisplay = [];
           bookdisplay[1] = JSON.stringify(result.rows[1].stuname);
-         var yellowblockone = document.getElementById('f');
-         yellowblockone.innerHTML = bookdisplay[1];
+        
  }
  });
+ var document = require('html-element').document;
+  var yellowblockone = document.getElementById('f');
+         yellowblockone.innerHTML = bookdisplay[1];
   
   res.end();
    
