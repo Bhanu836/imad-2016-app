@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 app.get('/article-db', function(req, res){
     
     // postgredatabase query all below codes
-     pool.query('SELECT booktitle FROM stubook by id DESC LIMIT 2',function(err,result){
+     pool.query('SELECT booktitle FROM stubook by id DESC',function(err,result){
         if(err){
             res.status(500).send(err.toString());
          }
