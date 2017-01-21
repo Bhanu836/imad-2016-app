@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 app.get('/article-db', function(req, res){
     
     // postgredatabase query all below codes
-     pool.query('SELECT * FROM stubook',function(err,result){
+     pool.query('SELECT booktitle FROM stubook by id DESC LIMIT 2',function(err,result){
         if(err){
             res.status(500).send(err.toString());
          }
@@ -177,9 +177,9 @@ res.end();
 pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.booktitle,req.body.genre,req.body.authorname]);
 
  
+ res.redirect('/ui/stubook.html');
+  
 
- res.render('/ui/stubook.html', function(err, html) {
-  res.send(html);
 });   
   res.end();
    
