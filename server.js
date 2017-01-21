@@ -179,7 +179,12 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
  
  res.redirect('/ui/stubook.html');
   
-
+ pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
+     for(var i=0;i<3;i++){
+         var bookdisplay[i] = JSON.stringify(result.rows[i].stuname);
+         var yellowblockone = document.getElementById('f');
+         yellowblockone.innerHTML = bookdisplay[1];
+ }
   
   res.end();
    
