@@ -32,7 +32,7 @@ app.get('/', function (req, res) {
 app.get('/article-db', function(req, res){
     
     // postgredatabase query all below codes
-     pool.query('SELECT * FROM user',function(err,result){
+     pool.query('SELECT * FROM stubook',function(err,result){
         if(err){
             res.status(500).send(err.toString());
          }
