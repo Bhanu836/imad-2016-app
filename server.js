@@ -186,6 +186,7 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
          var yellowblockone = document.getElementById('f');
          yellowblockone.innerHTML = bookdisplay[1];
  }
+ });
   
   res.end();
    
