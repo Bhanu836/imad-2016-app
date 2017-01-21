@@ -37,8 +37,8 @@ app.get('/article-db', function(req, res){
             res.status(500).send(err.toString());
          }
          else{
-             res.send(JSON.stringify(result));
-             console.log(result.stucity[1]);
+             res.send(JSON.stringify(result).stucity);
+             console.log(result);
          }
         
     });
