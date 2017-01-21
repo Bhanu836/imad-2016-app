@@ -180,7 +180,7 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
  res.redirect('/ui/stubook.html');
   
 
-});   
+  
   res.end();
    
  });
