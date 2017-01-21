@@ -177,8 +177,10 @@ res.end();
 pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.booktitle,req.body.genre,req.body.authorname]);
 
  
- res.redirect('/ui/stubook.html');
-    
+
+ res.render('/ui/stubook.html', function(err, html) {
+  res.send(html);
+});   
   res.end();
    
  });
