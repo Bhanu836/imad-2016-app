@@ -186,7 +186,7 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
         
  }
  });
- var document = require('html').document;
+ var document = require('html-element').document;
   var yellowblockone = document.getElementById('f');
          yellowblockone.innerHTML = bookdisplay[1];
   
