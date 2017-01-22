@@ -57,7 +57,12 @@ function  start(){
     marginleft= marginleft + 28 ;
    
     imgo.style.marginLeft=marginleft + "px" ;
+   }
    
-   
-    
-}
+var add = require('./server.js');
+var count = add(bookdisplay);
+var yc = document.getElementById('f');
+yc.addEventListener("click", function(){
+yc.innerHTML= "count";
+    console.log('count');
+});
