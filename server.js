@@ -72,10 +72,18 @@ app.get('/ui/rply.html', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
+ var bookdisplay ;
 app.get('/ui/stubook.html', function (req, res) {
+    pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
+     for(var i=0;i<3;i++){
+        
+          bookdisplay= JSON.stringify(result.rows[1].stuname);
+         }
+         });
   res.sendFile(path.join(__dirname, 'ui', 'stubook.html'));
 });
 
+module.exports = bookdisplay;
 
  
 
@@ -176,27 +184,8 @@ res.end();
 
 pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.booktitle,req.body.genre,req.body.authorname]);
 
-  pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
-     for(var i=0;i<3;i++){
-         var bookdisplay = [];
-          bookdisplay[1] = JSON.stringify(result.rows[1].stuname);
-         
-}
   
-  
-     });
- var b = function() {
-    
-     return bookdisplay[1];    
- }
- 
-   
-
-         module.exports = {
-    'b': b
-    
-};
-  res.redirect('/ui/stubook.html'); 
+ res.redirect('/ui/stubook.html'); 
   res.end();
    
  });
