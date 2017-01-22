@@ -74,13 +74,7 @@ app.get('/ui/main.js', function (req, res) {
 });
  var bookdisplay ;
 app.get('/ui/stubook.html', function (req, res) {
-    pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
-     for(var i=0;i<3;i++){
-        
-          bookdisplay= JSON.stringify(result.rows[1].stuname);
-         }
-         });
-  res.sendFile(path.join(__dirname, 'ui', 'stubook.html'));
+   res.sendFile(path.join(__dirname, 'ui', 'stubook.html'));
 });
 
 module.exports = bookdisplay;
@@ -189,6 +183,19 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
   res.end();
    
  });
+ 
+ var React = require('react');
+var ReactDOM = require('react-dom');
+var fd ;
+ pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
+     for(var i=0;i<3;i++){
+        
+          bookdisplay= JSON.stringify(result.rows[1].stuname);
+          fd = <p> bookdisplay</p>;
+         }
+         });
+         ReactDOM.render(fd,document.getElementById('f'));
+ 
  
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
