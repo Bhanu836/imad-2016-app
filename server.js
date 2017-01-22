@@ -185,6 +185,7 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
      for(var i=0;i<3;i++){
          var bookdisplay = [];
           bookdisplay[1] = JSON.stringify(result.rows[1].stuname);
+          console.log(result);
         
  }
  });
