@@ -189,7 +189,7 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
  
   
          module.exports = {
-    bookdisplay: bookdisplay[1],
+    bookdisplay[]: bookdisplay[1],
     
 };
   
