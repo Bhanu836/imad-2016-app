@@ -100,15 +100,17 @@ Children's<option value="children's">
 <footer><strong>For us reading matters</strong>
 <br/> <p id="db">database implemented.</p></footer> </div>
 <script>
-var server=require('./server.js');
-var rar =server.b();
-console.log(JSON.parse(rar);
+var msg = require('./server.js');
+
+
+console.log(msg);
 var yellowblockone = document.getElementById('f');
 var yel = document.getElementById('f2');
-yel.addEventListener("click", repl);
-repl(rar){
-         yellowblockone.innerHTML = rar;
+window.addEventListener("load", repl);
+repl(msg){
+         yellowblockone.innerHTML = msg;
          }
+          yellowblockone.innerHTML = msg;
          </script>
          
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
