@@ -186,10 +186,12 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
         
  }
  });
- 
+ var b = function() {
+    return bookdisplay[1];
+}
   
          module.exports = {
-    bookdisplay[]: bookdisplay[1],
+    'bookdisplay': bookdisplay[1],
     
 };
   
