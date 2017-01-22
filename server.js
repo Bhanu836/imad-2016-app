@@ -186,14 +186,16 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
  
  var React = require('react');
 var ReactDOM = require('react-dom');
-var fd ;
+var bookdisplay ;
  pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
      for(var i=0;i<3;i++){
         
           bookdisplay= JSON.stringify(result.rows[1].stuname);
-        var  fd = <h6>bookdisplay</h6>;
+        
+       
          }
          });
+          var h1 = <h6>Hello world</h6>;
          ReactDOM.render(fd,document.getElementById('f'));
  
  
