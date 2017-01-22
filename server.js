@@ -72,15 +72,10 @@ app.get('/ui/rply.html', function (req, res) {
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
- var bookdisplay ;
+ 
 app.get('/ui/stubook.html', function (req, res) {
-    if(req.method==="GET" && req.url === "/ui/stubook.html"){
-    pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
-    res.render(path.join(__dirname, 'ui', 'stubook.html'),result
-         );
-   
-    });
-}
+  
+    res.sendFile(path.join(__dirname, 'ui', 'stubook.html'));
 });
 
 
