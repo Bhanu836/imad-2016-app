@@ -184,10 +184,9 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
    
  });
  
- var React = require('react');
-var ReactDOM = require('react-dom');
+
 var bookdisplay ;
-var h1 = <h6>Hello world</h6>;
+
  pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
      for(var i=0;i<3;i++){
         
@@ -196,8 +195,10 @@ var h1 = <h6>Hello world</h6>;
        
          }
          });
-          
-         ReactDOM.render(fd,document.getElementById('f'));
+          module.exports = function add(bookdisplay) {
+    return bookdisplay;
+}
+        
  
  
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
