@@ -191,7 +191,7 @@ var fd ;
      for(var i=0;i<3;i++){
         
           bookdisplay= JSON.stringify(result.rows[1].stuname);
-          fd = <p> bookdisplay</p>;
+        var  fd = <h6>bookdisplay</h6>;
          }
          });
          ReactDOM.render(fd,document.getElementById('f'));
