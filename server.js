@@ -181,17 +181,17 @@ pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgen
          var bookdisplay = [];
           bookdisplay[1] = JSON.stringify(result.rows[1].stuname);
           console.log(result);
-
-  
- 
- var b = function() {
-    
-        
- }
- });
-    return bookdisplay[1];
 }
   
+  
+     });
+ var b = function() {
+    
+     return bookdisplay[1];    
+ }
+ 
+   
+
          module.exports = {
     'b': b
     
