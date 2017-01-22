@@ -176,16 +176,16 @@ res.end();
 
 pool.query('INSERT INTO stubook(stuname,stucity,stucollagename,booktitle,bookgenre,bookauthorname)VALUES($1,$2,$3,$4,$5,$6)',[req.body.stuname,req.body.stucity,req.body.stucollage,req.body.booktitle,req.body.genre,req.body.authorname]);
 
- 
-
-  
- 
- var b = function() {
-     pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
+  pool.query('SELECT id ,stuname FROM stubook ORDER BY id DESC LIMIT 2',function(err,result){
      for(var i=0;i<3;i++){
          var bookdisplay = [];
           bookdisplay[1] = JSON.stringify(result.rows[1].stuname);
           console.log(result);
+
+  
+ 
+ var b = function() {
+    
         
  }
  });
